@@ -1,0 +1,52 @@
+body {
+    background-image: url(background-body.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card {
+    width: 90%;
+    max-width: 470px;
+    color: lightpink;
+    margin: 100px auto 0;
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search input{
+    border: 2px;
+    outline: 0;
+    border-radius: 20px;
+    background-color: #ebffff;
+    color: #555;
+    padding: 10px 25px;
+    height: 50px;
+    flex: 1;
+    margin-right: 15px;
+    font-size: 15px;
+
+}
+.search button{
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img{
+    width: 16px;
+}
