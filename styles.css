@@ -1,15 +1,16 @@
 body {
-  background-image: url(background-body.jpg);
+  background-image: url(images/background-body.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .card {
   width: 90%;
   max-width: 470px;
   margin: 100px auto 0;
-  background: linear-gradient(135deg, #bebab2, #b87243);
+  background: linear-gradient(135deg, #26887b, #049bb6);
   background-color: aqua;
   border-radius: 20px;
   padding: 40px 35px;
@@ -27,7 +28,7 @@ body {
 
 .search input {
   border: 2px;
-  outline: 0;
+  outline: 100px;
   border-radius: 20px;
   background: #ebfffc;
   color: #555;
@@ -35,7 +36,8 @@ body {
   height: 50px;
   flex: 1;
   margin-right: 15px;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: 100;
 }
 
 .search button {
