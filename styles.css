@@ -1,83 +1,51 @@
 body {
-  background-image: url(images/background-body.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1707343844152-6d33a0bb32c3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  color: white;
 }
-
 .card {
-  width: 90%;
-  max-width: 470px;
-  margin: 100px auto 0;
-  background: linear-gradient(135deg, #26887b, #049bb6);
-  background-color: aqua;
-  border-radius: 20px;
-  padding: 40px 35px;
-  text-align: center;
+  background-color: black;
+  max-width: 500px;
+  border-radius: 25px;
+  padding: 32px;
+  opacity: 0.8;
+  font-family: inherit;
 }
-
 .search {
-  width: 100%;
-  align-items: center;
-  border-radius: 10px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
+  font-family: inherit;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
 }
-
-.search input {
-  border: 2px;
-  outline: 100px;
+.searchbar {
+  height: 40px;
   border-radius: 20px;
-  background: #ebfffc;
-  color: #555;
-  padding: 10px 25px;
-  height: 50px;
-  flex: 1;
-  margin-right: 15px;
-  font-size: 20px;
-  font-weight: 100;
+  border: none;
+  font-size: 120%;
+  padding: 10px;
+  width: calc(100% - 50px);
 }
-
-.search button {
-  border: 0;
-  outline: 0;
-  border-radius: 20px;
+.searchbutton {
+  margin: 10px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  border: none;
+  opacity: 0.3;
+  color: white;
+}
+.searchbutton:hover {
+  opacity: 0.7;
   cursor: pointer;
-}
-
-.search button img {
-  width: 20px;
-}
-.weather-icon {
-  width: 170px;
-  margin-top: 30px;
-}
-.weather h1 {
-  font-size: 40px;
-  font-weight: 500;
-  margin-top: -10px;
-}
-.weather h2 {
-  font-size: 45px;
-  font-weight: 400;
-  margin-top: -30px;
-}
-.details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.details img {
-  width: 100px;
-  height: 100px;
-}
-
-.details p {
-  font-size: 30px;
-  margin-top: -5px;
+  border-radius: 50%;
+  transition: 0.2 ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
 }
