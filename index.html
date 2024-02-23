@@ -13,24 +13,61 @@
     <div class="card">
       <div class="search">
         <input
-          type="search"
+          type="text"
           class="searchbar"
           placeholder="Enter city name..."
+          spellcheck="false"
         />
-        <button class="searchbutton">
+        <button onclick="fetchweather()" class="searchbutton">
           <img src="images/search.png" alt="search icon" />
         </button>
       </div>
       <div class="weather-loading">
-        <h2>Weather in Denver.</h2>
+        <h2 class="city">Weather in Denver.</h2>
         <h1>51°C</h1>
         <div class="flex">
+          <div>
+            <img
+              src="https://openweathermap.org/img/wn/04n.png"
+              alt=""
+              class="icon"
+            />
+          </div>
           <div class="description">Cloudy</div>
         </div>
-        <div>Humidity: 32%</div>
-        <div>Wind speed: 5 Km/h</div>
+        <div class="humidity">Humidity: 32%</div>
+        <div class="windspeed">Wind speed: 5 Km/h</div>
       </div>
     </div>
-    <script></script>
+    <script>
+      const API_key = "263d903a0aa55cc905ecd844d1128e40";
+      async function fetchweather() {
+        const City_Name = document.querySelector(".searchbar").value;
+        const Api_Url = `https://api.openweathermap.org/data/2.5/weather?q=${City_Name}&appid=${API_key}&units=metric`;
+        const response = await fetch(Api_Url);
+        const data = await response.json();
+        console.log(data);
+        console.log(City_Name);
+        document.querySelector(".city").innerHTML =
+          "Weather in " + data.name + ".";
+        document.querySelector(".description").innerHTML =
+          data.weather[0].description;
+        document.querySelector(".icon").src =
+          "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png";
+        document.querySelector(".humidity").innerHTML =
+          "Humidity: " + data.main.humidity + "%";
+        document.querySelector(".windspeed").innerHTML =
+          "Wind speed: " + data.wind.speed + "Km/H";
+        document.body.style.backgroundImage =
+          "url('https://source.unsplash.com/1600x900/?" + City_Name + "')";
+      }
+      document
+        .querySelector(".searchbar")
+        .addEventListener("keypress", function (e) {
+          if (e.key === "Enter") {
+            fetchweather();
+          }
+        });
+    </script>
   </body>
 </html>
